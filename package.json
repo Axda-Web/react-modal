@@ -1,6 +1,6 @@
 {
   "name": "@axda/react-modal",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "A re-usable and customizable React modal component",
   "main": "index.js",
   "module": "dist/index.es.js",
@@ -54,5 +54,6 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "type": "module"
 }

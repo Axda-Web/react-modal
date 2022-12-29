@@ -8,6 +8,7 @@ const StyledModal = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +19,7 @@ const StyledModal = styled.div`
         box-shadow: ${({modalStyle}) => modalStyle.modalWrapper.boxShadow || '0 5px 16px rgba(0, 0, 0, 0.2)'};
         background: ${({modalStyle}) => modalStyle.modalWrapper.background || '#fff'};
         position: relative;
-        z-index: 1000;
+        z-index: 10100;
         border-radius: ${({modalStyle}) => modalStyle.modalWrapper.borderRadius || '5px'};
         display: flex;
         justify-content: center;

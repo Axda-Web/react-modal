@@ -18,10 +18,11 @@
     
     width: 100vw;
     height: 100vh;
-    background: ${({modalStyle:e})=>e.modalOverlay.background||"rgba(0, 0, 0, .3)"};
+    background: ${({modalStyle:e})=>e.modalOverlay.background||"rgba(0, 0, 0, .5)"};
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +33,7 @@
         box-shadow: ${({modalStyle:e})=>e.modalWrapper.boxShadow||"0 5px 16px rgba(0, 0, 0, 0.2)"};
         background: ${({modalStyle:e})=>e.modalWrapper.background||"#fff"};
         position: relative;
-        z-index: 10;
+        z-index: 10100;
         border-radius: ${({modalStyle:e})=>e.modalWrapper.borderRadius||"5px"};
         display: flex;
         justify-content: center;
@@ -41,10 +42,10 @@
     }
 
     .modal-content {
-        color: ${({modalStyle:e})=>e.modalContent.color||"#000"};
-        background: ${({modalStyle:e})=>e.modalContent.background||"transparent"};
-        font-size: ${({modalStyle:e})=>e.modalContent.fontSize||"1rem"};
-        font-weight: ${({modalStyle:e})=>e.modalContent.fontWeight||"400"};
+        color: ${({modalStyle:e})=>e.modalContent.color||"rgba(0, 0, 0, 0.8)"};
+        background: ${({modalStyle:e})=>e.modalContent.background||"#fff"};
+        font-size: ${({modalStyle:e})=>e.modalContent.fontSize||"1.5rem"};
+        font-weight: ${({modalStyle:e})=>e.modalContent.fontWeight||"700"};
         font-family: ${({modalStyle:e})=>e.modalContent.fontFamily||"inherit"};
     }
 
@@ -57,6 +58,6 @@
         height: 32px;
         padding: 0;
         z-index: 10;
-        color: ${({modalStyle:e})=>e.closeModalButton.color||"#000"};
+        color: ${({modalStyle:e})=>e.closeModalButton.color||"rgba(0, 0, 0, 0.8)"};
     }
 `;exports.Modal=({showModal:t,setShowModal:n,modalStyle:r,children:o})=>{const s=e.useRef(),i=function(e,t){const n=_.fun(e),[[r],o]=_n(1,n?e:[e],n?t||[]:t);return n||2==arguments.length?[r,o]:r}({config:{duration:250},opacity:t?1:0,transform:t?"translateY(0%)":"translateY(-100%)"}),a=e.useCallback((e=>{"Escape"===e.key&&t&&n(!1)}),[n,t]);return e.useEffect((()=>(document.addEventListener("keydown",a),()=>document.removeEventListener("keydown",a))),[a]),e.createElement(e.Fragment,null,t?e.createElement(Ho,{onClick:e=>{s.current===e.target&&n(!1)},ref:s,modalStyle:r},e.createElement(Wn.div,{style:i},e.createElement("div",{className:"modal-wrapper",showModal:t},e.createElement("div",{className:"modal-content"},o),e.createElement(er,{className:"close-modal-button","aria-label":"Close modal",onClick:()=>n((e=>!e))})))):null)};
