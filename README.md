@@ -1,4 +1,4 @@
-[![Npm package version](https://badgen.net/npm/v/express)](https://www.npmjs.com/package/@axda/react-modal)
+[![npm version](https://badge.fury.io/js/@axda%2Freact-modal.svg)](https://badge.fury.io/js/@axda%2Freact-modal)
 
 # React Modal
 
